@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akib Osmani • Computer Science Student</title>
+  <meta name="description" content="Computer Science student portfolio showcasing projects, skills, and academic achievements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Go to top">
+        <img class="brand-mark" id="brand-avatar" src="https://github.com/Akib-Osmani.png" alt="Akib Osmani" aria-hidden="true">
+        <span class="brand-text">Akib Osmani</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a class="btn small" href="Akib-Osmani-Curriculam-Vitae.pdf" target="_blank">
+          <i class="fas fa-download"></i> View CV
+        </a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1><span id="full-name">Akib Osmani</span></h1>
+          <p class="subtitle" id="tagline">Computer Science Student & Aspiring Data Scientist</p>
+          <p class="hero-description" id="hero-description">Passionate about creating innovative solutions through code and exploring the latest technologies in software development.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn outline" href="Akib-Osmani-Curriculam-Vitae.pdf" target="_blank">
+              <i class="fas fa-download"></i> View CV
+            </a>  
+          </div>
+          <div class="social" id="social-links" aria-label="Social links">
+            <a href="https://github.com/Akib-Osmani" target="_blank" rel="noopener" title="GitHub">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="mailto:akibaiub.edu@example.com" target="_blank" rel="noopener" title="Email">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://www.linkedin.com/in/akib-osmani02" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="hero-avatar">
+          <img id="avatar" src="https://github.com/Akib-Osmani.png" alt="Profile picture of Akib Osmani" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2><i class="fas fa-user"></i> About Me</h2>
+          <p class="lead">Computer Science student with a passion for technology and innovation.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-content">
+            <h3 id="name">Akib Osmani</h3>
+            <p id="bio">Loading bio...</p>
+            <div class="about-details">
+              <div class="detail-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Computer Science Student</span>
+              </div>
+              <div class="detail-item" id="location-detail" style="display:none">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="location-text"></span>
+              </div>
+              <div class="detail-item" id="email-detail" style="display:none">
+                <i class="fas fa-envelope"></i>
+                <a id="email-link" href=""></a>
+              </div>
+            </div>
+          </div>
+          <aside class="profile-cards">
+            <div class="card stats-card">
+              <div class="card-title"><i class="fab fa-github"></i> GitHub Stats</div>
+              <div class="card-kv"><span class="k">Repositories</span><span class="v" id="public-repos">—</span></div>
+              <div class="card-kv"><span class="k">Followers</span><span class="v" id="followers">—</span></div>
+              <div class="card-kv"><span class="k">Total Stars</span><span class="v" id="total-stars">—</span></div>
+            </div>
+            <div class="card">
+              <div class="card-title"><i class="fas fa-trophy"></i> Achievements</div>
+              <ul class="highlights" id="highlights">
+                <li>Active open source contributor</li>
+                <li>Continuous learner in CS field</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2><i class="fas fa-code"></i> Technical Skills</h2>
+          <p class="lead">Technologies and tools I work with.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3><i class="fas fa-laptop-code"></i> Programming Languages</h3>
+            <div class="skills-list" id="programming-languages">
+              <!-- populated by JS from GitHub repos -->
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-tools"></i> Technologies & Frameworks</h3>
+            <div class="skills-list" id="technologies">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Linux</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3><i class="fas fa-database"></i> Areas of Interest</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Software Development</span>
+              <span class="skill-tag">Web Development</span>
+              <span class="skill-tag">Data Structures</span>
+              <span class="skill-tag">Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2><i class="fas fa-microscope"></i> Research & Publications</h2>
+          <p class="lead">Academic research interests and scholarly contributions.</p>
+        </div>
+        <div class="research-grid">
+          <div class="research-item card">
+            <div class="research-header">
+              <h3>Machine Learning Applications</h3>
+              <span class="research-status ongoing">Ongoing</span>
+            </div>
+            <p class="research-desc">Exploring applications of machine learning algorithms in data analysis and pattern recognition for real-world problem solving.</p>
+            <div class="research-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">Data Science</span>
+            </div>
+          </div>
+          <div class="research-item card">
+            <div class="research-header">
+              <h3>Web Development Optimization</h3>
+              <span class="research-status completed">Completed</span>
+            </div>
+            <p class="research-desc">Research on performance optimization techniques for modern web applications and their impact on user experience.</p>
+            <div class="research-tags">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Performance</span>
+              <span class="skill-tag">UX</span>
+            </div>
+          </div>
+          <div class="research-item card">
+            <div class="research-header">
+              <h3>Algorithm Analysis</h3>
+              <span class="research-status planning">Planning</span>
+            </div>
+            <p class="research-desc">Comparative analysis of sorting and searching algorithms with focus on time complexity and practical applications.</p>
+            <div class="research-tags">
+              <span class="skill-tag">Algorithms</span>
+              <span class="skill-tag">Data Structures</span>
+              <span class="skill-tag">Analysis</span>
+            </div>
+          </div>
+        </div>
+        <div class="research-interests">
+          <h3>Research Interests</h3>
+          <div class="interests-list">
+            <div class="interest-item">
+              <i class="fas fa-robot"></i>
+              <span>Artificial Intelligence</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-database"></i>
+              <span>Data Science</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Cybersecurity</span>
+            </div>
+            <div class="interest-item">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Mobile Computing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2><i class="fas fa-folder-open"></i> Projects</h2>
+          <p class="lead">A showcase of my development work and contributions.</p>
+        </div>
+        <div id="projects-grid" class="grid">
+          <div class="skeleton card"></div>
+          <div class="skeleton card"></div>
+          <div class="skeleton card"></div>
+          <div class="skeleton card"></div>
+          <div class="skeleton card"></div>
+          <div class="skeleton card"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2><i class="fas fa-graduation-cap"></i> Education & Experience</h2>
+          <p class="lead">My academic journey and learning path.</p>
+        </div>
+        <div class="education-timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>Computer Science Student</h3>
+              <p class="timeline-meta">Currently Pursuing</p>
+              <p>Studying core computer science concepts including data structures, algorithms, software engineering, and system design.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="timeline-content">
+              <h3>Self-Taught Developer</h3>
+              <p class="timeline-meta">Ongoing</p>
+              <p>Continuously learning new technologies and building projects to enhance practical programming skills.</p>
+            </div>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat">
+            <div class="num" data-counter="public-repos">0</div>
+            <div class="label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-counter="total-stars">0</div>
+            <div class="label">GitHub Stars</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-counter="followers">0</div>
+            <div class="label">Followers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+          <p class="lead">Let's connect and discuss opportunities or collaborations.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card card">
+            <h3>Contact Information</h3>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <i class="fab fa-github"></i>
+                <div>
+                  <strong>GitHub</strong>
+                  <a id="contact-github" href="https://github.com/Akib-Osmani" target="_blank" rel="noopener">@Akib-Osmani</a>
+                </div>
+              </div>
+              <div class="contact-method" id="email-method" style="display:none">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <a id="contact-email-link" href=""></a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-actions">
+              <a class="btn cv-download" href="Akib-Osmani-Curriculam-Vitae.pdf" target="_blank">
+                <i class="fas fa-download"></i> View CV
+              </a>
+              <div class="social-links" id="contact-social">
+                <!-- populated by JS -->
+              </div>
+            </div>
+          </div>
+          <div class="contact-card card">
+            <h3>Let's Collaborate</h3>
+            <p>I'm always interested in:</p>
+            <ul class="collaboration-list">
+              <li><i class="fas fa-code"></i> Open source projects</li>
+              <li><i class="fas fa-users"></i> Team collaborations</li>
+              <li><i class="fas fa-briefcase"></i> Internship opportunities</li>
+              <li><i class="fas fa-graduation-cap"></i> Learning opportunities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand small">
+          <img class="brand-mark" src="https://github.com/Akib-Osmani.png" alt="Akib Osmani" aria-hidden="true">
+          <span class="brand-text">Akib Osmani</span>
+        </div>
+        <p class="muted">© <span id="year"></span> Akib Osmani | Student of Computer Science and Engineering</p>
+      </div>
+      
+    </div>
+  </footer>
+
+  <script>
+    // Minimal inline script to avoid FOUC on year and nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
