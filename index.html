@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Akib Osmani • Computer Science Student</title>
-  <meta name="description" content="Computer Science student portfolio showcasing projects, skills, and academic achievements." />
+  <meta name="description"
+    content="Computer Science student portfolio showcasing projects, skills, and academic achievements." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#home" aria-label="Go to top">
-        <img class="brand-mark" id="brand-avatar" src="https://github.com/Akib-Osmani.png" alt="Akib Osmani" aria-hidden="true">
+        <img class="brand-mark" id="brand-avatar" src="https://github.com/Akib-Osmani.png" alt="Akib Osmani"
+          aria-hidden="true">
         <span class="brand-text">Akib Osmani</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -25,8 +34,9 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <a class="btn small" href="Akib-Osmani-Curriculam-Vitae.pdf" target="_blank">
-          <i class="fas fa-download"></i> View CV
+        <a class="btn small" href="Akib-Osmani-Curriculam-Vitae.pdf" download
+          style="background-color: #1a7e69; color: #ffffff;">
+          <i class="fas fa-download"></i> Download CV
         </a>
       </nav>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
@@ -40,12 +50,12 @@
         <div class="hero-text">
           <h1><span id="full-name">Akib Osmani</span></h1>
           <p class="subtitle" id="tagline">Computer Science Student & Aspiring Data Scientist</p>
-          <p class="hero-description" id="hero-description">Passionate about creating innovative solutions through code and exploring the latest technologies in software development.</p>
+            <p class="hero-description" id="hero-description">Passionate about leveraging data to drive insights and create innovative solutions through machine learning and data analysis.</p>
           <div class="hero-actions">
             <a class="btn" href="#projects">View Projects</a>
-            <a class="btn outline" href="Akib-Osmani-Curriculam-Vitae.pdf" target="_blank">
-              <i class="fas fa-download"></i> View CV
-            </a>  
+              
+
+
           </div>
           <div class="social" id="social-links" aria-label="Social links">
             <a href="https://github.com/Akib-Osmani" target="_blank" rel="noopener" title="GitHub">
@@ -92,16 +102,16 @@
             </div>
           </div>
           <aside class="profile-cards">
-            <div class="card stats-card">
+            <!-- <div class="card stats-card">
               <div class="card-title"><i class="fab fa-github"></i> GitHub Stats</div>
               <div class="card-kv"><span class="k">Repositories</span><span class="v" id="public-repos">—</span></div>
               <div class="card-kv"><span class="k">Followers</span><span class="v" id="followers">—</span></div>
               <div class="card-kv"><span class="k">Total Stars</span><span class="v" id="total-stars">—</span></div>
-            </div>
+            </div> -->
             <div class="card">
               <div class="card-title"><i class="fas fa-trophy"></i> Achievements</div>
-              <ul class="highlights" id="highlights">
-                <li>Active open source contributor</li>
+              <ul class="highlights" >
+                <li>Deans List Honors Recipient</li>
                 <li>Continuous learner in CS field</li>
               </ul>
             </div>
@@ -120,9 +130,12 @@
         <div class="skills-grid">
           <div class="skill-category">
             <h3><i class="fas fa-laptop-code"></i> Programming Languages</h3>
-            <div class="skills-list" id="programming-languages">
-              <!-- populated by JS from GitHub repos -->
-            </div>
+            <!-- populated by JS from GitHub repos -->
+            <!-- <div class="skills-list" id="programming-languages">
+            </div> -->
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Java</span>
           </div>
           <div class="skill-category">
             <h3><i class="fas fa-tools"></i> Technologies & Frameworks</h3>
@@ -130,16 +143,19 @@
               <span class="skill-tag">Git</span>
               <span class="skill-tag">GitHub</span>
               <span class="skill-tag">VS Code</span>
-              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">Pandas, Numpy, Polars</span>
+              <a class="skill-tag" href="https://monkeytype.com/profile/Akib_Osmani" style="background-color: #49b9aa;">Monkeytype</a>
+              
             </div>
           </div>
           <div class="skill-category">
             <h3><i class="fas fa-database"></i> Areas of Interest</h3>
             <div class="skills-list">
-              <span class="skill-tag">Software Development</span>
-              <span class="skill-tag">Web Development</span>
-              <span class="skill-tag">Data Structures</span>
+              <span class="skill-tag">Data Science</span>
+              <span class="skill-tag">Data Analyst</span>
+              <span class="skill-tag">Machine Learning</span>
               <span class="skill-tag">Algorithms</span>
+              <span class="skill-tag">Research</span>
             </div>
           </div>
         </div>
@@ -159,7 +175,8 @@
               <h3>Machine Learning Applications</h3>
               <span class="research-status ongoing">Ongoing</span>
             </div>
-            <p class="research-desc">Exploring applications of machine learning algorithms in data analysis and pattern recognition for real-world problem solving.</p>
+            <p class="research-desc">Exploring applications of machine learning algorithms in data analysis and pattern
+              recognition for real-world problem solving.</p>
             <div class="research-tags">
               <span class="skill-tag">Python</span>
               <span class="skill-tag">TensorFlow</span>
@@ -171,7 +188,8 @@
               <h3>Web Development Optimization</h3>
               <span class="research-status completed">Completed</span>
             </div>
-            <p class="research-desc">Research on performance optimization techniques for modern web applications and their impact on user experience.</p>
+            <p class="research-desc">Research on performance optimization techniques for modern web applications and
+              their impact on user experience.</p>
             <div class="research-tags">
               <span class="skill-tag">JavaScript</span>
               <span class="skill-tag">Performance</span>
@@ -183,7 +201,8 @@
               <h3>Algorithm Analysis</h3>
               <span class="research-status planning">Planning</span>
             </div>
-            <p class="research-desc">Comparative analysis of sorting and searching algorithms with focus on time complexity and practical applications.</p>
+            <p class="research-desc">Comparative analysis of sorting and searching algorithms with focus on time
+              complexity and practical applications.</p>
             <div class="research-tags">
               <span class="skill-tag">Algorithms</span>
               <span class="skill-tag">Data Structures</span>
@@ -247,8 +266,10 @@
             </div>
             <div class="timeline-content">
               <h3>Computer Science Student</h3>
-              <p class="timeline-meta">Currently Pursuing</p>
-              <p>Studying core computer science concepts including data structures, algorithms, software engineering, and system design.</p>
+                <p class="timeline-meta">Currently Pursuing at <a href="https://www.aiub.edu/" target="_blank" rel="noopener" style="color: #cd7c0a; ">American International University-Bangladesh</a> <a href="https://www.aiub.edu/" target="_blank" rel="noopener" style="color: #cd7c0a; "> (AIUB)</a></p>
+              <p class="timeline-meta">Semester: Fall 2023 - Present</p>
+              <p>Studying core computer science concepts including data structures, algorithms, software engineering,
+                and system design.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -258,7 +279,8 @@
             <div class="timeline-content">
               <h3>Self-Taught Developer</h3>
               <p class="timeline-meta">Ongoing</p>
-              <p>Continuously learning new technologies and building projects to enhance practical programming skills.</p>
+              <p>Continuously learning new technologies and building projects to enhance practical programming skills.
+              </p>
             </div>
           </div>
         </div>
@@ -294,8 +316,16 @@
                 <i class="fab fa-github"></i>
                 <div>
                   <strong>GitHub</strong>
-                  <a id="contact-github" href="https://github.com/Akib-Osmani" target="_blank" rel="noopener">@Akib-Osmani</a>
+                  <a id="contact-github" href="https://github.com/Akib-Osmani" target="_blank"
+                    rel="noopener">@Akib-Osmani</a>
                 </div>
+                  </div>
+                  <div class="contact-method">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <strong>Email</strong>
+                    <a href="mailto:akibaiub.edu@gmail.com">akibaiub.edu@gmail.com</a>
+                  </div>
               </div>
               <div class="contact-method" id="email-method" style="display:none">
                 <i class="fas fa-envelope"></i>
@@ -338,7 +368,7 @@
         </div>
         <p class="muted">© <span id="year"></span> Akib Osmani | Student of Computer Science and Engineering</p>
       </div>
-      
+
     </div>
   </footer>
 
@@ -354,4 +384,5 @@
   </script>
   <script src="assets/js/main.js" defer></script>
 </body>
+
 </html>
