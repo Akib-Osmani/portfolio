@@ -13,10 +13,31 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const avatar = document.getElementById('avatar');
+      const images = ['https://github.com/Akib-Osmani.png', 'image2.jpg'];
+      let currentIndex = 0;
+      
+      setInterval(() => {
+        avatar.style.opacity = '0';
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % images.length;
+          avatar.src = images[currentIndex];
+          avatar.style.opacity = '1';
+        }, 500);
+      }, 3000);
+    });
+  </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <style>
+    #avatar {
+      transition: opacity 2s ease-in-out;
+    }
+  </style>
 </head>
 
 <body>
