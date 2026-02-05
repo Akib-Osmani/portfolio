@@ -27,6 +27,23 @@
           avatar.style.opacity = '1';
         }, 500);
       }, 3000);
+
+      // Dark mode toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+      const themeIcon = themeToggle.querySelector('i');
+      
+      // Check for saved theme preference or default to dark mode
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      html.setAttribute('data-theme', currentTheme);
+      themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      
+      themeToggle.addEventListener('click', function() {
+        const theme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      });
     });
   </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -55,6 +72,9 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
         <a class="btn small" href="Akib-Osmani-Curriculam-Vitae.pdf" download
           style="background-color: #1a7e69; color: #ffffff;">
           <i class="fas fa-download"></i> Download CV
@@ -207,7 +227,7 @@
           <div class="research-item card">
             <div class="research-header">
               <h3>Web Development Optimization</h3>
-              <span class="research-status completed">Completed</span>
+              <span class="research-status planning">Planning</span>
             </div>
             <p class="research-desc">Research on performance optimization techniques for modern web applications and
               their impact on user experience.</p>
@@ -244,11 +264,11 @@
             </div>
             <div class="interest-item">
               <i class="fas fa-shield-alt"></i>
-              <span>Cybersecurity</span>
+              <span>Data Analysis</span>
             </div>
             <div class="interest-item">
               <i class="fas fa-mobile-alt"></i>
-              <span>Mobile Computing</span>
+              <span>Machine Learning</span>
             </div>
           </div>
         </div>
@@ -263,12 +283,129 @@
           <p class="lead">A showcase of my development work and contributions.</p>
         </div>
         <div id="projects-grid" class="grid">
-          <div class="skeleton card"></div>
-          <div class="skeleton card"></div>
-          <div class="skeleton card"></div>
-          <div class="skeleton card"></div>
-          <div class="skeleton card"></div>
-          <div class="skeleton card"></div>
+          <!-- Project 1 -->
+          <div class="card repo">
+            <div class="repo-top">
+              <h3>Hazzard Incident Analysis</h3>
+              <div style="display:flex;gap:.5rem;align-items:center;color:var(--muted);font-size:.9rem">
+                <span title="Stars">⭐ 2</span>
+              </div>
+            </div>
+            <p class="desc">Analyzed large datasets using Java to find patterns and trends in hazzard incidents.</p>
+            <div class="tags">
+              <span class="tag"><span class="dot" style="background-color:#3572A5"></span>Java</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Data Analysis</span>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card repo">
+            <div class="repo-top">
+              <h3>Data Visualization Project</h3>
+              <div style="display:flex;gap:.5rem;align-items:center;color:var(--muted);font-size:.9rem">
+                <span title="Stars">⭐ 3</span>
+              </div>
+            </div>
+            <p class="desc">Pandas and Matplotlib were used to create interactive visualizations for data analysis.</p>
+            <div class="tags">
+              <span class="tag"><span class="dot" style="background-color:#3572A5"></span>Python</span>
+              <!-- <span class="tag">ML</span> -->
+              <span class="tag">TensorFlow</span>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card repo">
+            <div class="repo-top">
+              <h3>AIUB Slot Booking System</h3>
+              <div style="display:flex;gap:.5rem;align-items:center;color:var(--muted);font-size:.9rem">
+                <span title="Stars">⭐4.9</span>
+              </div>
+            </div>
+            <p class="desc">Interactive visualization tool for sorting and searching algorithms to understand their behavior.</p>
+            <div class="tags">
+              <span class="tag"><span class="dot" style="background-color:#f34b7d"></span>C#</span>
+              <span class="tag">Windows Forms</span>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <!-- <div class="card repo">
+            <div class="repo-top">
+              <h3>Portfolio Website</h3>
+              <div style="display:flex;gap:.5rem;align-items:center;color:var(--muted);font-size:.9rem">
+                <span title="Stars">⭐ 0</span>
+              </div>
+            </div>
+            <p class="desc">Personal portfolio website showcasing projects, skills, and academic achievements with dark mode support.</p>
+            <div class="tags">
+              <span class="tag"><span class="dot" style="background-color:#e34c26"></span>HTML</span>
+              <span class="tag"><span class="dot" style="background-color:#563d7c"></span>CSS</span>
+              <span class="tag"><span class="dot" style="background-color:#f1e05a"></span>JavaScript</span>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="https://github.com/Akib-Osmani" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div> -->
+
+          <!-- Project 5 -->
+          <!-- <div class="card repo">
+            <div class="repo-top">
+              <h3>Database Management System</h3>
+              <div style="display:flex;gap:.5rem;align-items:center;color:var(--muted);font-size:.9rem">
+                <span title="Stars">⭐ 0</span>
+              </div>
+            </div>
+            <p class="desc">Designed and implemented a database system for managing student records and academic data.</p>
+            <div class="tags">
+              <span class="tag"><span class="dot" style="background-color:#b07219"></span>Java</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Database</span>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div> -->
+
+          <!-- Project 6 -->
+          <!-- <div class="card repo">
+            <div class="repo-top">
+              <h3>Data Structures Library</h3>
+              <div style="display:flex;gap:.5rem;align-items:center;color:var(--muted);font-size:.9rem">
+                <span title="Stars">⭐ 0</span>
+              </div>
+            </div>
+            <p class="desc">Implementation of common data structures including linked lists, trees, and graphs in C++.</p>
+            <div class="tags">
+              <span class="tag"><span class="dot" style="background-color:#f34b7d"></span>C++</span>
+              <span class="tag">Data Structures</span>
+            </div>
+            <div class="actions">
+              <a class="btn small" href="#" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -307,15 +444,15 @@
         </div>
         <div class="stats-grid">
           <div class="stat">
-            <div class="num" data-counter="public-repos">0</div>
+            <div class="num" data-counter="public-repos">4</div>
             <div class="label">Projects</div>
           </div>
           <div class="stat">
-            <div class="num" data-counter="total-stars">0</div>
+            <div class="num" data-counter="total-stars">1</div>
             <div class="label">GitHub Stars</div>
           </div>
           <div class="stat">
-            <div class="num" data-counter="followers">0</div>
+            <div class="num" data-counter="followers">1</div>
             <div class="label">Followers</div>
           </div>
         </div>
