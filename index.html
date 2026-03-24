@@ -34,7 +34,8 @@
       const themeIcon = themeToggle.querySelector('i');
       
       // Check for saved theme preference or default to dark mode
-      const currentTheme = localStorage.getItem('theme') || 'dark';
+      const isMobile = window.innerWidth <= 900;
+      const currentTheme = localStorage.getItem('theme') || (isMobile ? 'light' : 'dark');
       html.setAttribute('data-theme', currentTheme);
       themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
       
