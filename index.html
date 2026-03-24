@@ -27,36 +27,12 @@
           avatar.style.opacity = '1';
         }, 500);
       }, 3000);
-
-      // Dark mode toggle
-      const themeToggle = document.getElementById('theme-toggle');
-      const html = document.documentElement;
-      const themeIcon = themeToggle.querySelector('i');
-      
-      // Check for saved theme preference or default to dark mode
-      const currentTheme = localStorage.getItem('theme') || (window.innerWidth <= 900 ? 'light' : 'dark');
-      html.setAttribute('data-theme', currentTheme);
-      themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-      
-      themeToggle.addEventListener('click', function() {
-        const theme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        html.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-      });
     });
   </script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <script>
-    (function() {
-      var saved = localStorage.getItem('theme');
-      var theme = saved ? saved : (window.innerWidth <= 900 ? 'light' : 'dark');
-      document.documentElement.setAttribute('data-theme', theme);
-    })();
-  </script>
   <style>
     #avatar {
       transition: opacity 2s ease-in-out;
@@ -80,9 +56,6 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-          <i class="fas fa-moon"></i>
-        </button>
         <a class="btn small" href="Akib-Osmani-Curriculam-Vitae.pdf" download
           style="background-color: #1a7e69; color: #ffffff;">
           <i class="fas fa-download"></i> Download CV
