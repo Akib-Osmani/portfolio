@@ -34,8 +34,7 @@
       const themeIcon = themeToggle.querySelector('i');
       
       // Check for saved theme preference or default to dark mode
-      const isMobile = window.innerWidth <= 900;
-      const currentTheme = localStorage.getItem('theme') || (isMobile ? 'light' : 'dark');
+      const currentTheme = localStorage.getItem('theme') || (window.innerWidth <= 900 ? 'light' : 'dark');
       html.setAttribute('data-theme', currentTheme);
       themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
       
@@ -51,6 +50,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var theme = saved ? saved : (window.innerWidth <= 900 ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <style>
     #avatar {
       transition: opacity 2s ease-in-out;
